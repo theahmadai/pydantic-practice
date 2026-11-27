@@ -3,7 +3,7 @@ from typing import Optional,List,Annotated
 class patient(BaseModel):
     name:str = Field(max_length=5,strict=True)
     
-    Email: Annotated[EmailStr,Field(max_length=50,description='This is the email:',examples='abc@gmail.com')]
+    Email: Annotated[EmailStr,Field(max_length=10,description='This is the email:',examples='abc@gmail.com')]
     age:int
     contact_Detail:Optional[List['str']]
 def patient_info(patient:patient):
